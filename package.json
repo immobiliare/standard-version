@@ -33,9 +33,9 @@
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/conventional-changelog/standard-version/issues"
+    "url": "https://github.com/immobiliare/standard-version/issues"
   },
-  "homepage": "https://github.com/conventional-changelog/standard-version#readme",
+  "homepage": "https://github.com/immobiliare/standard-version#readme",
   "dependencies": {
     "chalk": "^2.4.2",
     "conventional-changelog": "3.1.25",
