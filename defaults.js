@@ -1,18 +1,18 @@
-const spec = require("conventional-changelog-config-spec");
+const spec = require('conventional-changelog-config-spec');
 
 const defaults = {
-  infile: "CHANGELOG.md",
+  infile: 'CHANGELOG.md',
   firstRelease: false,
   sign: false,
   noVerify: false,
   commitAll: false,
   silent: false,
-  tagPrefix: "v",
+  tagPrefix: 'v',
   scripts: {},
   skip: {},
   dryRun: false,
   gitTagFallback: true,
-  preset: require.resolve("conventional-changelog-conventionalcommits"),
+  preset: require.resolve('conventional-changelog-conventionalcommits'),
 };
 
 /**
@@ -28,13 +28,13 @@ Object.keys(spec.properties).forEach((propertyKey) => {
  * compatibility. This should be removed in the next major version.
  */
 defaults.header =
-  "# Changelog\n\nAll notable changes to this project will be documented in this file. See [standard-version](https://github.com/immobiliare/standard-version) for commit guidelines.\n";
+  '# Changelog\n\nAll notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.\n';
 
-defaults.packageFiles = ["package.json", "bower.json", "manifest.json"];
+defaults.packageFiles = ['package.json', 'bower.json', 'manifest.json'];
 
 defaults.bumpFiles = defaults.packageFiles.concat([
-  "package-lock.json",
-  "npm-shrinkwrap.json",
+  'package-lock.json',
+  'npm-shrinkwrap.json',
 ]);
 
 module.exports = defaults;
