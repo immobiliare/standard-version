@@ -779,7 +779,7 @@ describe('with mocked git', function () {
       cmd.should.equal('git');
       const expected = gitArgs.shift();
       cmdArgs.should.deep.equal(expected);
-      if (expected[0] === 'rev-parse') return Promise.resolve('master');
+      if (expected[0] === 'rev-parse') return Promise.resolve('main');
       return Promise.resolve('');
     };
     mock({ bump: 'patch', changelog: 'foo\n', execFile });

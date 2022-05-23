@@ -6,7 +6,7 @@ A utility for versioning using [semver](https://semver.org/) and CHANGELOG gener
 
 ![ci](https://github.com/immobiliare/standard-version/workflows/ci/badge.svg)
 [![NPM version](https://img.shields.io/npm/v/standard-version.svg)](https://www.npmjs.com/package/standard-version)
-[![codecov](https://codecov.io/gh/conventional-changelog/standard-version/branch/master/graph/badge.svg?token=J7zMN7vTTd)](https://codecov.io/gh/conventional-changelog/standard-version)
+[![codecov](https://codecov.io/gh/conventional-changelog/standard-version/branch/main/graph/badge.svg?token=J7zMN7vTTd)](https://codecov.io/gh/conventional-changelog/standard-version)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Community slack](http://devtoolscommunity.herokuapp.com/badge.svg)](http://devtoolscommunity.herokuapp.com)
 
@@ -99,7 +99,7 @@ be provided via configuration. Please refer to the [conventional-changelog-confi
 
 ### Customizing CHANGELOG Generation
 
-By default (as of `6.0.0`), `standard-version` uses the [conventionalcommits preset](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-conventionalcommits).
+By default (as of `6.0.0`), `standard-version` uses the [conventionalcommits preset](https://github.com/conventional-changelog/conventional-changelog/tree/main/packages/conventional-changelog-conventionalcommits).
 
 This preset:
 
