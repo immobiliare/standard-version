@@ -12,6 +12,7 @@ const stdMocks = require('std-mocks');
 
 const cli = require('../command');
 const formatCommitMessage = require('../lib/format-commit-message');
+const { expect } = require('chai');
 
 require('chai').should();
 
@@ -69,7 +70,8 @@ function mock({ bump, changelog, execFile, fs, pkg, tags } = {}) {
       })
   );
 
-  mockery.registerMock('git-semver-tags', function (cb) {
+  mockery.registerMock('git-semver-tags', function (opts, cb) {
+    if (typeof opts === 'function') cb = opts;
     if (tags instanceof Error) cb(tags);
     else cb(null, tags | []);
   });
@@ -438,13 +440,16 @@ describe('cli', function () {
 describe('standard-version', function () {
   afterEach(unmock);
 
-  it.only('should return release infos', async function () {
+  it('should return release infos', async function () {
     const m = {
       bump: 'patch',
     };
     mock(m);
     const results = await exec();
-    console.log('results :>> ', results);
+    expect(results).to.have.property('version');
+    expect(results).to.have.property('changelog');
+    expect(results).to.have.property('commit');
+    results.version.should.equal('v1.0.1');
   });
 
   it('should exit on bump error', async function () {
@@ -774,7 +779,7 @@ describe('with mocked git', function () {
       cmd.should.equal('git');
       const expected = gitArgs.shift();
       cmdArgs.should.deep.equal(expected);
-      if (expected[0] === 'rev-parse') return Promise.resolve('master');
+      if (expected[0] === 'rev-parse') return Promise.resolve('main');
       return Promise.resolve('');
     };
     mock({ bump: 'patch', changelog: 'foo\n', execFile });

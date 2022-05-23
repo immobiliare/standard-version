@@ -5,7 +5,6 @@
   "bin": "bin/cli.js",
   "scripts": {
     "fix": "eslint . --fix",
-    "posttest": "eslint .",
     "test": "nyc mocha --timeout=30000",
     "test:unit": "mocha --exclude test/git.spec.js",
     "coverage": "nyc report --reporter=lcov",
@@ -16,9 +15,11 @@
       "tmp/**"
     ]
   },
-  "repository": "conventional-changelog/standard-version",
+  "repository": {
+    "url": "https://github.com/immobiliare/standard-version"
+  },
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "keywords": [
     "conventional-changelog",

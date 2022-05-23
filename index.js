@@ -87,6 +87,7 @@ module.exports = async function standardVersion(argv) {
     const versions = await latestSemverTag(0, {
       changelogIncludesPrereleases: args.changelogIncludesPrereleases,
       withPrefix: true,
+      tagPrefix: args.tagPrefix,
     });
 
     // When using this feature the whole changelog is regenerated
@@ -120,7 +121,9 @@ module.exports = async function standardVersion(argv) {
         gitSemverTags: versions,
       },
       newVersion,
-      versions[1] // oldVersion
+      // provide the old version only if we're on doing tag-to-tag changelog
+      // this is to maintain backward compatibility with existing behaviour
+      !args.changelogIncludesPrereleases ? versions[1] : undefined // oldVersion
     );
     const commitMsg = await commit(args, newVersion);
     await tag(newVersion, pkg ? pkg.private : false, args);
