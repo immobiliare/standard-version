@@ -1,4 +1,9 @@
-# Standard Version
+<h1 align="center">Standard Version</h1>
+
+![ci](https://github.com/immobiliare/standard-version/workflows/test/badge.svg)
+[![NPM version](https://img.shields.io/npm/v/standard-version.svg)](https://www.npmjs.com/package/standard-version)
+[![codecov](https://codecov.io/gh/immobiliare/standard-version/branch/main/graph/badge.svg?token=J7zMN7vTTd)](https://codecov.io/gh/immobiliare/standard-version)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 > This repository is a **fork** of the well known [conventional-changelog/standard-version](https://github.com/immobiliare/standard-version) which is no longer maintained.
 
@@ -6,10 +11,7 @@ A utility for versioning using [semver](https://semver.org/) and CHANGELOG gener
 
 _Having problems? Want to contribute? Open a issue!_
 
-![ci](https://github.com/immobiliare/standard-version/workflows/test/badge.svg)
-[![NPM version](https://img.shields.io/npm/v/standard-version.svg)](https://www.npmjs.com/package/standard-version)
-[![codecov](https://codecov.io/gh/immobiliare/standard-version/branch/main/graph/badge.svg?token=J7zMN7vTTd)](https://codecov.io/gh/immobiliare/standard-version)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+## Table of Content
 
 <!-- top -->
 
