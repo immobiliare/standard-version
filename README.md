@@ -1,7 +1,6 @@
 # Standard Version
 
 > This repository is a **fork** of the well known [conventional-changelog/standard-version](https://github.com/immobiliare/standard-version) which is no longer maintained.
-> This fork is intended for us to maintain the tool for our intended internal usage and add some minor enhancement that we can benefit from, if you have some idea pleas open a issue!
 
 A utility for versioning using [semver](https://semver.org/) and CHANGELOG generation powered by [Conventional Commits](https://conventionalcommits.org).
 
@@ -9,10 +8,8 @@ A utility for versioning using [semver](https://semver.org/) and CHANGELOG gener
 [![NPM version](https://img.shields.io/npm/v/standard-version.svg)](https://www.npmjs.com/package/standard-version)
 [![codecov](https://codecov.io/gh/immobiliare/standard-version/branch/main/graph/badge.svg?token=J7zMN7vTTd)](https://codecov.io/gh/immobiliare/standard-version)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-[![Community slack](http://devtoolscommunity.herokuapp.com/badge.svg)](http://devtoolscommunity.herokuapp.com)
 
-_Having problems? Want to contribute? Join us on the [node-tooling community Slack](http://devtoolscommunity.herokuapp.com)_.
-
+_Having problems? Want to contribute? Open a issue!_
 
 _How It Works:_
 
