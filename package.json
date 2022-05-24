@@ -59,7 +59,7 @@
     "git-semver-tags": "^4.0.0",
     "semver": "^7.1.1",
     "stringify-package": "^1.0.1",
-    "yargs": "^16.0.0"
+    "yargs": "^17.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
