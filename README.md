@@ -11,6 +11,8 @@ A utility for versioning using [semver](https://semver.org/) and CHANGELOG gener
 
 _Having problems? Want to contribute? Open a issue!_
 
+## Table of Content
+
 <!-- toc -->
 
 - [How It Works](#how-it-works)
