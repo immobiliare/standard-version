@@ -463,6 +463,12 @@ module.exports.writeVersion = function (contents, version) {
 }
 ```
 
+## Acknowledgement
+
+This package is a fork of the original work of [bcoe](https://github.com/bcoe) on [standard-version](https://github.com/conventional-changelog/standard-version#readme). This projects aim to maintain the existing APIs while adding some minor enhancements and new Node.js version supports.
+
+We're moving forward from original latest version `9.5.0` to avoid conflicts, everything before `v10.0.0` can be found on the original repository.
+
 ## License
 
 ISC
