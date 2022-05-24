@@ -8,7 +8,8 @@
     "test": "nyc mocha --timeout=30000",
     "test:unit": "mocha --exclude test/git.spec.js",
     "coverage": "nyc report --reporter=lcov",
-    "release": "bin/cli.js"
+    "release": "bin/cli.js",
+    "prepare": "node prepare.js || echo 'Skipping prepare script' && husky install"
   },
   "nyc": {
     "exclude": [
@@ -61,12 +62,25 @@
     "yargs": "^16.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@saithodev/semantic-release-backmerge": "^2.1.2",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "chai": "^4.2.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
+    "husky": "^6.0.0",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^12.4.1",
+    "markdown-toc": "^1.2.0",
     "mocha": "^8.2.1",
     "mock-fs": "^4.13.0",
     "mockery": "^2.1.0",

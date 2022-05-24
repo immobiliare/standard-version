@@ -4,12 +4,16 @@
 
 A utility for versioning using [semver](https://semver.org/) and CHANGELOG generation powered by [Conventional Commits](https://conventionalcommits.org).
 
+_Having problems? Want to contribute? Open a issue!_
+
 ![ci](https://github.com/immobiliare/standard-version/workflows/test/badge.svg)
 [![NPM version](https://img.shields.io/npm/v/standard-version.svg)](https://www.npmjs.com/package/standard-version)
 [![codecov](https://codecov.io/gh/immobiliare/standard-version/branch/main/graph/badge.svg?token=J7zMN7vTTd)](https://codecov.io/gh/immobiliare/standard-version)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-_Having problems? Want to contribute? Open a issue!_
+<!-- top -->
+
+<!-- topstop -->
 
 _How It Works:_
 
@@ -20,10 +24,9 @@ _How It Works:_
 
 1. Retrieve the current version of your repository by looking at `packageFiles`[[1]](#bumpfiles-packagefiles-and-updaters), falling back to the last `git tag`.
 2. `bump` the version in `bumpFiles`[[1]](#bumpfiles-packagefiles-and-updaters) based on your commits.
-4. Generates a `changelog` based on your commits (uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) under the hood).
-5. Creates a new `commit` including your `bumpFiles`[[1]](#bumpfiles-packagefiles-and-updaters) and updated CHANGELOG.
-6. Creates a new `tag` with the new version number.
-
+3. Generates a `changelog` based on your commits (uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) under the hood).
+4. Creates a new `commit` including your `bumpFiles`[[1]](#bumpfiles-packagefiles-and-updaters) and updated CHANGELOG.
+5. Creates a new `tag` with the new version number.
 
 ### `bumpFiles`, `packageFiles` and `updaters`
 
@@ -89,11 +92,11 @@ You can configure `standard-version` either by:
 1. Placing a `standard-version` stanza in your `package.json` (assuming
    your project is JavaScript).
 2. Creating a `.versionrc`, `.versionrc.json` or `.versionrc.js`.
-  - If you are using a `.versionrc.js` your default export must be a configuration object, or a function returning a configuration object.
+
+- If you are using a `.versionrc.js` your default export must be a configuration object, or a function returning a configuration object.
 
 Any of the command line parameters accepted by `standard-version` can instead
 be provided via configuration. Please refer to the [conventional-changelog-config-spec](https://github.com/conventional-changelog/conventional-changelog-config-spec/) for details on available configuration options.
-
 
 ### Customizing CHANGELOG Generation
 
@@ -101,19 +104,19 @@ By default (as of `6.0.0`), `standard-version` uses the [conventionalcommits pre
 
 This preset:
 
-* Adheres closely to the [conventionalcommits.org](https://www.conventionalcommits.org)
+- Adheres closely to the [conventionalcommits.org](https://www.conventionalcommits.org)
   specification.
-* Is highly configurable, following the configuration specification
+- Is highly configurable, following the configuration specification
   [maintained here](https://github.com/conventional-changelog/conventional-changelog-config-spec).
-  * _We've documented these config settings as a recommendation to other tooling makers._
+  - _We've documented these config settings as a recommendation to other tooling makers._
 
 There are a variety of dials and knobs you can turn related to CHANGELOG generation.
 
 As an example, suppose you're using GitLab, rather than GitHub, you might modify the following variables:
 
-* `commitUrlFormat`: the URL format of commit SHAs detected in commit messages.
-* `compareUrlFormat`: the URL format used to compare two tags.
-* `issueUrlFormat`: the URL format used to link to issues.
+- `commitUrlFormat`: the URL format of commit SHAs detected in commit messages.
+- `compareUrlFormat`: the URL format used to compare two tags.
+- `issueUrlFormat`: the URL format used to link to issues.
 
 Making these URLs match GitLab's format, rather than GitHub's.
 
@@ -163,6 +166,7 @@ Suppose the last version of your code is `1.0.0`, and your code to be committed 
 # npm run script
 npm run release -- --prerelease
 ```
+
 This will tag your version as: `1.0.1-0`.
 
 If you want to name the pre-release, you specify the name via `--prerelease <name>`.
@@ -215,15 +219,15 @@ If you have your GPG key set up, add the `--sign` or `-s` flag to your `standard
 own supplementary commands during the release. The following
 hooks are available and execute in the order documented:
 
-* `prerelease`: executed before anything happens. If the `prerelease` script returns a
+- `prerelease`: executed before anything happens. If the `prerelease` script returns a
   non-zero exit code, versioning will be aborted, but it has no other effect on the
   process.
-* `prebump`/`postbump`: executed before and after the version is bumped. If the `prebump`
+- `prebump`/`postbump`: executed before and after the version is bumped. If the `prebump`
   script returns a version #, it will be used rather than
   the version calculated by `standard-version`.
-* `prechangelog`/`postchangelog`: executes before and after the CHANGELOG is generated.
-* `precommit`/`postcommit`: called before and after the commit step.
-* `pretag`/`posttag`: called before and after the tagging step.
+- `prechangelog`/`postchangelog`: executes before and after the CHANGELOG is generated.
+- `precommit`/`postcommit`: called before and after the commit step.
+- `pretag`/`posttag`: called before and after the tagging step.
 
 Simply add the following to your package.json to configure lifecycle scripts:
 
@@ -240,6 +244,7 @@ Simply add the following to your package.json to configure lifecycle scripts:
 As an example to change from using GitHub to track your items to using your projects Jira use a
 `postchangelog` script to replace the url fragment containing 'https://github.com/`myproject`/issues/'
 with a link to your Jira - assuming you have already installed [replace](https://www.npmjs.com/package/replace)
+
 ```json
 {
   "standard-version": {
@@ -325,19 +330,21 @@ standard-version --help
 ## Code Usage
 
 ```js
-const standardVersion = require('standard-version')
+const standardVersion = require('standard-version');
 
 // Options are the same as command line, except camelCase
 // standardVersion returns a Promise
 standardVersion({
   noVerify: true,
   infile: 'docs/CHANGELOG.md',
-  silent: true
-}).then(() => {
-  // standard-version is done
-}).catch(err => {
-    console.error(`standard-version failed with message: ${err.message}`)
+  silent: true,
 })
+  .then(() => {
+    // standard-version is done
+  })
+  .catch((err) => {
+    console.error(`standard-version failed with message: ${err.message}`);
+  });
 ```
 
 _TIP: Use the `silent` option to prevent `standard-version` from printing to the `console`._
@@ -350,7 +357,7 @@ _TIP: Use the `silent` option to prevent `standard-version` from printing to the
 
 > semantic-release automates the whole package release workflow including: determining the next version number, generating the release notes and publishing the package.
 
-While both are based on the same foundation of structured commit messages, `standard-version`  takes a different approach by handling versioning, changelog generation, and git tagging for you **without** automatic pushing (to GitHub) or publishing (to an npm registry). Use of `standard-version` only affects your local git repo - it doesn't affect remote resources at all. After you run `standard-version`, you can review your release state, correct mistakes and follow the release strategy that makes the most sense for your codebase.
+While both are based on the same foundation of structured commit messages, `standard-version` takes a different approach by handling versioning, changelog generation, and git tagging for you **without** automatic pushing (to GitHub) or publishing (to an npm registry). Use of `standard-version` only affects your local git repo - it doesn't affect remote resources at all. After you run `standard-version`, you can review your release state, correct mistakes and follow the release strategy that makes the most sense for your codebase.
 
 We think they are both fantastic tools, and we encourage folks to use `semantic-release` instead of `standard-version` if it makes sense for their use-case.
 
@@ -370,8 +377,8 @@ As of version `7.1.0` you can configure multiple `bumpFiles` and `packageFiles`.
 
 1. Specify a custom `bumpFile` "`filename`", this is the path to the file you want to "bump"
 2. Specify the `bumpFile` "`updater`", this is _how_ the file will be bumped.
-    a. If you're using a common type, you can use one of  `standard-version`'s built-in `updaters` by specifying a `type`.
-    b. If your using an less-common version file, you can create your own `updater`.
+   a. If you're using a common type, you can use one of `standard-version`'s built-in `updaters` by specifying a `type`.
+   b. If your using an less-common version file, you can create your own `updater`.
 
 ```js
 // .versionrc
@@ -402,13 +409,13 @@ If using `.versionrc.js` as your configuration file, the `updater` may also be s
 // .versionrc.js
 const tracker = {
   filename: 'VERSION_TRACKER.json',
-  updater: require('./path/to/custom-version-updater')
-}
+  updater: require('./path/to/custom-version-updater'),
+};
 
 module.exports = {
   bumpFiles: [tracker],
-  packageFiles: [tracker]
-}
+  packageFiles: [tracker],
+};
 ```
 
 #### Custom `updater`s
@@ -439,28 +446,27 @@ Let's assume our `VERSION_TRACKER.json` has the following contents:
     }
   }
 }
-
 ```
 
 An acceptable `standard-version-updater.js` would be:
 
 ```js
 // standard-version-updater.js
-const stringifyPackage = require('stringify-package')
-const detectIndent = require('detect-indent')
-const detectNewline = require('detect-newline')
+const stringifyPackage = require('stringify-package');
+const detectIndent = require('detect-indent');
+const detectNewline = require('detect-newline');
 
 module.exports.readVersion = function (contents) {
   return JSON.parse(contents).tracker.package.version;
-}
+};
 
 module.exports.writeVersion = function (contents, version) {
-  const json = JSON.parse(contents)
-  let indent = detectIndent(contents).indent
-  let newline = detectNewline(contents)
-  json.tracker.package.version = version
-  return stringifyPackage(json, indent, newline)
-}
+  const json = JSON.parse(contents);
+  let indent = detectIndent(contents).indent;
+  let newline = detectNewline(contents);
+  json.tracker.package.version = version;
+  return stringifyPackage(json, indent, newline);
+};
 ```
 
 ## Acknowledgement
