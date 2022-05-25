@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/immobiliare/standard-version/branch/main/graph/badge.svg?token=J7zMN7vTTd)](https://codecov.io/gh/immobiliare/standard-version)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-> This repository is a **fork** of the well known [conventional-changelog/standard-version](https://github.com/immobiliare/standard-version) which is no longer maintained.
+> **Note:** This repository is a **fork** of the well known [conventional-changelog/standard-version](https://github.com/immobiliare/standard-version) which is no longer maintained, we indend to keep it working while adding some small utilities we need in our day-to-day, but we won't do ground breaking features since today there are more viable options.
 
 A utility for versioning using [semver](https://semver.org/) and CHANGELOG generation powered by [Conventional Commits](https://conventionalcommits.org).
 
@@ -23,6 +23,7 @@ _Having problems? Want to contribute? Open a issue!_
   - [Using `npx`](#using-npx)
 - [Configuration](#configuration)
   - [Customizing CHANGELOG Generation](#customizing-changelog-generation)
+    - [Compact changelog by non-prerelease tags only](#compact-changelog-by-non-prerelease-tags-only)
 - [CLI Usage](#cli-usage)
   - [First Release](#first-release)
   - [Cutting Releases](#cutting-releases)
@@ -35,6 +36,7 @@ _Having problems? Want to contribute? Open a issue!_
   - [Committing Generated Artifacts in the Release Commit](#committing-generated-artifacts-in-the-release-commit)
   - [Dry Run Mode](#dry-run-mode)
   - [Prefix Tags](#prefix-tags)
+  - [Regenerate whole changelog from the first version](#regenerate-whole-changelog-from-the-first-version)
   - [CLI Help](#cli-help)
 - [Code Usage](#code-usage)
 - [FAQ](#faq)
@@ -123,7 +125,7 @@ This method is especially useful when using `standard-version` in non-JavaScript
 
 You can configure `standard-version` either by:
 
-1. Placing a `standard-version` stanza in your `package.json` (assuming
+1. Placing a `standard-version` `configs` field in your `package.json` (assuming
    your project is JavaScript).
 2. Creating a `.versionrc`, `.versionrc.json` or `.versionrc.js`.
 
@@ -153,6 +155,10 @@ As an example, suppose you're using GitLab, rather than GitHub, you might modify
 - `issueUrlFormat`: the URL format used to link to issues.
 
 Making these URLs match GitLab's format, rather than GitHub's.
+
+#### Compact changelog by non-prerelease tags only
+
+Convetional Changelog by default will generate a CHANGELOG entry for each tag, but sometimes this can become messy if you do a lot of pre-releases (eg: v1.0.0-132). If you want the each entry to just list the changes between each non-prerelease version use the `--changelogIncludesPrereleases` flag
 
 ## CLI Usage
 
@@ -352,6 +358,14 @@ If you do not want to have any tag prefix you can use the `-t` flag and provide 
 
 > Note: simply -t or --tag-prefix without any value will fallback to the default 'v'
 
+### Regenerate whole changelog from the first version
+
+When you start using standard-version on an existing repositories you may have a changelog in a different format, or have none, and you may want to create one with all the entries for the existing version.
+
+```sh
+standard-version --regenerateChangelog
+```
+
 ### CLI Help
 
 ```sh
@@ -373,9 +387,15 @@ standardVersion({
   infile: 'docs/CHANGELOG.md',
   silent: true,
 })
-  .then(() => {
-    // standard-version is done
-  })
+  .then(
+    ({
+      changelog, // generated changelog
+      version, // new generated version tag
+      commit, // commit message
+    }) => {
+      // standard-version is done
+    }
+  )
   .catch((err) => {
     console.error(`standard-version failed with message: ${err.message}`);
   });
