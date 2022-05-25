@@ -1,14 +1,18 @@
 {
   "name": "@immobiliarelabs/standard-version",
-  "version": "10.0.0-0",
+  "version": "10.0.0-next.0",
   "description": "replacement for `npm version` with automatic CHANGELOG generation",
   "bin": "bin/cli.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "fix": "eslint . --fix",
     "test": "nyc mocha --timeout=30000",
     "test:unit": "mocha --exclude test/git.spec.js",
     "coverage": "nyc report --reporter=lcov",
-    "prepare": "node prepare.js || echo 'Skipping prepare script' && husky install"
+    "prepare": "node prepare.js || echo 'Skipping prepare script'"
   },
   "nyc": {
     "exclude": [
@@ -31,7 +35,7 @@
     "angular",
     "standard"
   ],
-  "author": "TBD",
+  "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
   "contributors": [
     {
       "name": "Ben Coe",
@@ -46,9 +50,9 @@
   "homepage": "https://github.com/immobiliare/standard-version#readme",
   "dependencies": {
     "chalk": "^2.4.2",
-    "conventional-changelog": "3.1.25",
-    "conventional-changelog-config-spec": "2.1.0",
-    "conventional-changelog-conventionalcommits": "4.6.3",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-config-spec": "^2.1.0",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "conventional-recommended-bump": "6.1.0",
     "detect-indent": "^6.0.0",
     "detect-newline": "^3.1.0",
@@ -87,5 +91,8 @@
     "prettier": "^2.6.2",
     "shelljs": "^0.8.4",
     "std-mocks": "^1.0.1"
+  },
+  "volta": {
+    "node": "12.22.12"
   }
 }

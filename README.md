@@ -16,34 +16,32 @@ _Having problems? Want to contribute? Open a issue!_
 <!-- toc -->
 
 - [How It Works](#how-it-works)
-  - [`bumpFiles`, `packageFiles` and `updaters`](#bumpfiles-packagefiles-and-updaters)
-- [Installing `standard-version`](#installing-standard-version)
-  - [As a local `npm run` script](#as-a-local-npm-run-script)
-  - [As global `bin`](#as-global-bin)
-  - [Using `npx`](#using-npx)
+  * [`bumpFiles`, `packageFiles` and `updaters`](#bumpfiles-packagefiles-and-updaters)
+- [Installing `@immobiliarelabs/standard-version`](#installing-immobiliarelabsstandard-version)
+  * [As a local `npm run` script](#as-a-local-npm-run-script)
+  * [As global `bin`](#as-global-bin)
+  * [Using `npx`](#using-npx)
 - [Configuration](#configuration)
-  - [Customizing CHANGELOG Generation](#customizing-changelog-generation)
-    - [Compact changelog by non-prerelease tags only](#compact-changelog-by-non-prerelease-tags-only)
+  * [Customizing CHANGELOG Generation](#customizing-changelog-generation)
 - [CLI Usage](#cli-usage)
-  - [First Release](#first-release)
-  - [Cutting Releases](#cutting-releases)
-  - [Release as a Pre-Release](#release-as-a-pre-release)
-  - [Release as a Target Type Imperatively (`npm version`-like)](#release-as-a-target-type-imperatively-npm-version-like)
-  - [Prevent Git Hooks](#prevent-git-hooks)
-  - [Signing Commits and Tags](#signing-commits-and-tags)
-  - [Lifecycle Scripts](#lifecycle-scripts)
-  - [Skipping Lifecycle Steps](#skipping-lifecycle-steps)
-  - [Committing Generated Artifacts in the Release Commit](#committing-generated-artifacts-in-the-release-commit)
-  - [Dry Run Mode](#dry-run-mode)
-  - [Prefix Tags](#prefix-tags)
-  - [Regenerate whole changelog from the first version](#regenerate-whole-changelog-from-the-first-version)
-  - [CLI Help](#cli-help)
+  * [First Release](#first-release)
+  * [Cutting Releases](#cutting-releases)
+  * [Release as a Pre-Release](#release-as-a-pre-release)
+  * [Release as a Target Type Imperatively (`npm version`-like)](#release-as-a-target-type-imperatively-npm-version-like)
+  * [Prevent Git Hooks](#prevent-git-hooks)
+  * [Signing Commits and Tags](#signing-commits-and-tags)
+  * [Lifecycle Scripts](#lifecycle-scripts)
+  * [Skipping Lifecycle Steps](#skipping-lifecycle-steps)
+  * [Committing Generated Artifacts in the Release Commit](#committing-generated-artifacts-in-the-release-commit)
+  * [Dry Run Mode](#dry-run-mode)
+  * [Prefix Tags](#prefix-tags)
+  * [CLI Help](#cli-help)
 - [Code Usage](#code-usage)
 - [FAQ](#faq)
-  - [How is `standard-version` different from `semantic-release`?](#how-is-standard-version-different-from-semantic-release)
-  - [Should I always squash commits when merging PRs?](#should-i-always-squash-commits-when-merging-prs)
-  - [Can I use `standard-version` for additional metadata files, languages or version files?](#can-i-use-standard-version-for-additional-metadata-files-languages-or-version-files)
-    - [Custom `updater`s](#custom-updaters)
+  * [How is `standard-version` different from `semantic-release`?](#how-is-standard-version-different-from-semantic-release)
+  * [Should I always squash commits when merging PRs?](#should-i-always-squash-commits-when-merging-prs)
+  * [Can I use `standard-version` for additional metadata files, languages or version files?](#can-i-use-standard-version-for-additional-metadata-files-languages-or-version-files)
+    + [Custom `updater`s](#custom-updaters)
       - [`readVersion(contents = string): string`](#readversioncontents--string-string)
       - [`writeVersion(contents = string, version: string): string`](#writeversioncontents--string-version-string-string)
 - [Acknowledgement](#acknowledgement)
@@ -79,14 +77,14 @@ By default, `standard-version` assumes you're working in a NodeJS based project.
 
 That said, if you find your self asking [How can I use standard-version for additional metadata files, languages or version files?](#can-i-use-standard-version-for-additional-metadata-files-languages-or-version-files) – these configuration options will help!
 
-## Installing `standard-version`
+## Installing `@immobiliarelabs/standard-version`
 
 ### As a local `npm run` script
 
 Install and add to `devDependencies`:
 
 ```sh
-npm i --save-dev standard-version
+npm i --save-dev @immobiliarelabs/standard-version
 ```
 
 Add an [`npm run` script](https://docs.npmjs.com/cli/run-script) to your `package.json`:
@@ -94,49 +92,49 @@ Add an [`npm run` script](https://docs.npmjs.com/cli/run-script) to your `packag
 ```json
 {
   "scripts": {
-    "release": "standard-version"
+    "release": "@immobiliarelabs/standard-version"
   }
 }
 ```
 
 Now you can use `npm run release` in place of `npm version`.
 
-This has the benefit of making your repo/package more portable, so that other developers can cut releases without having to globally install `standard-version` on their machine.
+This has the benefit of making your repo/package more portable, so that other developers can cut releases without having to globally install `@immobiliarelabs/standard-version` on their machine.
 
 ### As global `bin`
 
 Install globally (add to your `PATH`):
 
 ```
-npm i -g standard-version
+npm i -g @immobiliarelabs/standard-version
 ```
 
-Now you can use `standard-version` in place of `npm version`.
+Now you can use `@immobiliarelabs/standard-version` in place of `npm version`.
 
-This has the benefit of allowing you to use `standard-version` on any repo/package without adding a dev dependency to each one.
+This has the benefit of allowing you to use `@immobiliarelabs/standard-version` on any repo/package without adding a dev dependency to each one.
 
 ### Using `npx`
 
-As of `npm@5.2.0`, `npx` is installed alongside `npm`. Using `npx` you can use `standard-version` without having to keep a `package.json` file by running: `npx standard-version`.
+As of `npm@5.2.0`, `npx` is installed alongside `npm`. Using `npx` you can use `@immobiliarelabs/standard-version` without having to keep a `package.json` file by running: `npx @immobiliarelabs/standard-version`.
 
-This method is especially useful when using `standard-version` in non-JavaScript projects.
+This method is especially useful when using `@immobiliarelabs/standard-version` in non-JavaScript projects.
 
 ## Configuration
 
-You can configure `standard-version` either by:
+You can configure `@immobiliarelabs/standard-version` either by:
 
-1. Placing a `standard-version` `configs` field in your `package.json` (assuming
+1. Placing a `@immobiliarelabs/standard-version` `configs` field in your `package.json` (assuming
    your project is JavaScript).
 2. Creating a `.versionrc`, `.versionrc.json` or `.versionrc.js`.
 
 - If you are using a `.versionrc.js` your default export must be a configuration object, or a function returning a configuration object.
 
-Any of the command line parameters accepted by `standard-version` can instead
+Any of the command line parameters accepted by `@immobiliarelabs/standard-version` can instead
 be provided via configuration. Please refer to the [conventional-changelog-config-spec](https://github.com/conventional-changelog/conventional-changelog-config-spec/) for details on available configuration options.
 
 ### Customizing CHANGELOG Generation
 
-By default (as of `6.0.0`), `standard-version` uses the [conventionalcommits preset](https://github.com/conventional-changelog/conventional-changelog/tree/main/packages/conventional-changelog-conventionalcommits).
+By default (as of `6.0.0`), `@immobiliarelabs/standard-version` uses the [conventionalcommits preset](https://github.com/conventional-changelog/conventional-changelog/tree/main/packages/conventional-changelog-conventionalcommits).
 
 This preset:
 
@@ -156,10 +154,6 @@ As an example, suppose you're using GitLab, rather than GitHub, you might modify
 
 Making these URLs match GitLab's format, rather than GitHub's.
 
-#### Compact changelog by non-prerelease tags only
-
-Convetional Changelog by default will generate a CHANGELOG entry for each tag, but sometimes this can become messy if you do a lot of pre-releases (eg: v1.0.0-132). If you want the each entry to just list the changes between each non-prerelease version use the `--changelogIncludesPrereleases` flag
-
 ## CLI Usage
 
 > **NOTE:** To pass nested configurations to the CLI without defining them in the `package.json` use dot notation as the parameters `e.g. --skip.changelog`.
@@ -172,9 +166,9 @@ To generate your changelog for your first release, simply do:
 # npm run script
 npm run release -- --first-release
 # global bin
-standard-version --first-release
+@immobiliarelabs/standard-version --first-release
 # npx
-npx standard-version --first-release
+npx @immobiliarelabs/standard-version --first-release
 ```
 
 This will tag a release **without bumping the version `bumpFiles`[1]()**.
@@ -189,7 +183,7 @@ If you typically use `npm version` to cut a new release, do this instead:
 # npm run script
 npm run release
 # or global bin
-standard-version
+@immobiliarelabs/standard-version
 ```
 
 As long as your git commit messages are conventional and accurate, you no longer need to specify the semver type - and you get CHANGELOG generation for free! \o/
@@ -246,16 +240,16 @@ If you use git hooks, like pre-commit, to test your code before committing, you 
 # npm run script
 npm run release -- --no-verify
 # or global bin
-standard-version --no-verify
+@immobiliarelabs/standard-version --no-verify
 ```
 
 ### Signing Commits and Tags
 
-If you have your GPG key set up, add the `--sign` or `-s` flag to your `standard-version` command.
+If you have your GPG key set up, add the `--sign` or `-s` flag to your `@immobiliarelabs/standard-version` command.
 
 ### Lifecycle Scripts
 
-`standard-version` supports lifecycle scripts. These allow you to execute your
+`@immobiliarelabs/standard-version` supports lifecycle scripts. These allow you to execute your
 own supplementary commands during the release. The following
 hooks are available and execute in the order documented:
 
@@ -264,7 +258,7 @@ hooks are available and execute in the order documented:
   process.
 - `prebump`/`postbump`: executed before and after the version is bumped. If the `prebump`
   script returns a version #, it will be used rather than
-  the version calculated by `standard-version`.
+  the version calculated by `@immobiliarelabs/standard-version`.
 - `prechangelog`/`postchangelog`: executes before and after the CHANGELOG is generated.
 - `precommit`/`postcommit`: called before and after the commit step.
 - `pretag`/`posttag`: called before and after the tagging step.
@@ -327,21 +321,21 @@ If you want to commit generated artifacts in the release commit, you can use the
 ```json
 {
   "scripts": {
-    "release": "standard-version -a"
+    "release": "@immobiliarelabs/standard-version -a"
   }
 }
 ```
 
 ### Dry Run Mode
 
-running `standard-version` with the flag `--dry-run` allows you to see what
+running `@immobiliarelabs/standard-version` with the flag `--dry-run` allows you to see what
 commands would be run, without committing to git or updating files.
 
 ```sh
 # npm run script
 npm run release -- --dry-run
 # or global bin
-standard-version --dry-run
+@immobiliarelabs/standard-version --dry-run
 ```
 
 ### Prefix Tags
@@ -349,7 +343,7 @@ standard-version --dry-run
 Tags are prefixed with `v` by default. If you would like to prefix your tags with something else, you can do so with the `-t` flag.
 
 ```sh
-standard-version -t @scope/package\@
+@immobiliarelabs/standard-version -t @scope/package\@
 ```
 
 This will prefix your tags to look something like `@scope/package@2.0.0`
@@ -358,27 +352,19 @@ If you do not want to have any tag prefix you can use the `-t` flag and provide 
 
 > Note: simply -t or --tag-prefix without any value will fallback to the default 'v'
 
-### Regenerate whole changelog from the first version
-
-When you start using standard-version on an existing repositories you may have a changelog in a different format, or have none, and you may want to create one with all the entries for the existing version.
-
-```sh
-standard-version --regenerateChangelog
-```
-
 ### CLI Help
 
 ```sh
 # npm run script
 npm run release -- --help
 # or global bin
-standard-version --help
+@immobiliarelabs/standard-version --help
 ```
 
 ## Code Usage
 
 ```js
-const standardVersion = require('standard-version');
+const standardVersion = require('@immobiliarelabs/standard-version');
 
 // Options are the same as command line, except camelCase
 // standardVersion returns a Promise
