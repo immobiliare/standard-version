@@ -12,6 +12,16 @@ const yargs = require('yargs')
     default: defaults.bumpFiles,
     array: true,
   })
+  .option('regenerateChangelog', {
+    describe: 'Regenerates the full changelog of the project',
+    type: 'boolean',
+    default: defaults.regenerateChangelog,
+  })
+  .option('changelogIncludesPrereleases', {
+    describe: 'Should changelog include prereleases?',
+    type: 'boolean',
+    default: defaults.changelogIncludesPrereleases,
+  })
   .option('release-as', {
     alias: 'r',
     describe:

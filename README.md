@@ -83,7 +83,7 @@ That said, if you find your self asking [How can I use standard-version for addi
 
 Install and add to `devDependencies`:
 
-```
+```sh
 npm i --save-dev standard-version
 ```
 
