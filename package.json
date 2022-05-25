@@ -8,7 +8,6 @@
     "test": "nyc mocha --timeout=30000",
     "test:unit": "mocha --exclude test/git.spec.js",
     "coverage": "nyc report --reporter=lcov",
-    "release": "bin/cli.js",
     "prepare": "node prepare.js || echo 'Skipping prepare script' && husky install"
   },
   "nyc": {
