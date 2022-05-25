@@ -8,6 +8,8 @@ try {
   isCi = true;
 }
 
+console.log('is-ci :>> ', isCi);
+
 if (!isCi) {
   require('husky').install();
 }
