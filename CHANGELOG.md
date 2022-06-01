@@ -2,12 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [9.5.0](https://github.com/immobiliare/standard-version/compare/v9.4.0...v9.5.0) (2022-05-15)
+# [1.1.0](https://github.com/immobiliare/standard-version/compare/v1.0.0...v1.1.0) (2022-06-01)
+
+
+### Bug Fixes
+
+* removes compact changelog ([f52c0e4](https://github.com/immobiliare/standard-version/commit/f52c0e4acde08bd0b20c2ccd0f2250177b59f245))
+
+
+### BREAKING CHANGES
+
+* Major v10
+
+
+
+# 10.0.0-0 (2022-05-25)
+
+
+### Bug Fixes
+
+* adds new options as command flags ([95a3d46](https://github.com/immobiliare/standard-version/commit/95a3d46b591b5190755d5ad305f3fe1d55bfef98))
 
 
 ### Features
 
-* **deprecated:** add deprecation message ([#907](https://github.com/immobiliare/standard-version/issues/907)) ([61b41fa](https://github.com/immobiliare/standard-version/commit/61b41fa47ef690f55b92e2edb82fe554e3c1e13a))
+* promise returns release informatin ([eb33e1f](https://github.com/immobiliare/standard-version/commit/eb33e1f03f8bdf62c30fd77e027137646490d7b2))
+* regenerate full changelog ([a6dc99b](https://github.com/immobiliare/standard-version/commit/a6dc99b622ac33f20e5993b7d31527ddb778d139))
+
+
+
+# 9.5.0 (2022-05-15)
 
 
 ### Bug Fixes
@@ -15,7 +39,19 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps:** update dependency conventional-changelog to v3.1.25 ([#865](https://github.com/immobiliare/standard-version/issues/865)) ([4c938a2](https://github.com/immobiliare/standard-version/commit/4c938a2baac11385d655144429bc73b2199bb027))
 * **deps:** update dependency conventional-changelog-conventionalcommits to v4.6.3 ([#866](https://github.com/immobiliare/standard-version/issues/866)) ([6c75ed0](https://github.com/immobiliare/standard-version/commit/6c75ed0b1456913ae7e4d6fe8532fb4106df1bdf))
 
-## [9.4.0](https://github.com/immobiliare/standard-version/compare/v9.3.2...v9.4.0) (2021-12-31)
+
+### Features
+
+* **deprecated:** add deprecation message ([#907](https://github.com/immobiliare/standard-version/issues/907)) ([61b41fa](https://github.com/immobiliare/standard-version/commit/61b41fa47ef690f55b92e2edb82fe554e3c1e13a))
+
+
+
+# 9.4.0 (2021-12-31)
+
+
+### Bug Fixes
+
+* Ensures provided `packageFiles` arguments are merged with `bumpFiles` when no `bumpFiles` argument is specified (default). ([#534](https://github.com/immobiliare/standard-version/issues/534)) ([2785023](https://github.com/immobiliare/standard-version/commit/2785023c91668e7300e6a22e55d31b6bd9dae59b)), closes [#533](https://github.com/immobiliare/standard-version/issues/533) [#533](https://github.com/immobiliare/standard-version/issues/533)
 
 
 ### Features
@@ -23,39 +59,44 @@ All notable changes to this project will be documented in this file. See [standa
 * add .cjs config file ([#717](https://github.com/immobiliare/standard-version/issues/717)) ([eceaedf](https://github.com/immobiliare/standard-version/commit/eceaedf8b3cdeb282ee06bfa9c65503f42404858))
 
 
-### Bug Fixes
 
-* Ensures provided `packageFiles` arguments are merged with `bumpFiles` when no `bumpFiles` argument is specified (default). ([#534](https://github.com/immobiliare/standard-version/issues/534)) ([2785023](https://github.com/immobiliare/standard-version/commit/2785023c91668e7300e6a22e55d31b6bd9dae59b)), closes [#533](https://github.com/immobiliare/standard-version/issues/533) [#533](https://github.com/immobiliare/standard-version/issues/533)
-
-### [9.3.2](https://github.com/immobiliare/standard-version/compare/v9.3.1...v9.3.2) (2021-10-17)
+## 9.3.2 (2021-10-17)
 
 
 ### Bug Fixes
 
 * **deps:** update dependency conventional-changelog-conventionalcommits to v4.6.1 ([#752](https://github.com/immobiliare/standard-version/issues/752)) ([bb8869d](https://github.com/immobiliare/standard-version/commit/bb8869de7d8bcace1ec92f29e389e7fab506d64e))
 
-### [9.3.1](https://github.com/immobiliare/standard-version/compare/v9.3.0...v9.3.1) (2021-07-14)
+
+
+## 9.3.1 (2021-07-14)
 
 
 ### Bug Fixes
 
 * **updater:** npm7 package lock's inner version not being updated ([#713](https://github.com/immobiliare/standard-version/issues/713)) ([a316dd0](https://github.com/immobiliare/standard-version/commit/a316dd02f5a7d8dee33d99370afda8738985bc10))
 
-## [9.3.0](https://github.com/immobiliare/standard-version/compare/v9.2.0...v9.3.0) (2021-05-04)
+
+
+# 9.3.0 (2021-05-04)
 
 
 ### Features
 
 * add --lerna-package flag used to extract tags in case of lerna repo ([#503](https://github.com/immobiliare/standard-version/issues/503)) ([f579ff0](https://github.com/immobiliare/standard-version/commit/f579ff08f386aaae022a395ed0dbec9af77a5d49))
 
-## [9.2.0](https://github.com/immobiliare/standard-version/compare/v9.1.1...v9.2.0) (2021-04-06)
+
+
+# 9.2.0 (2021-04-06)
 
 
 ### Features
 
 * allows seperate prefixTag version sequences ([#573](https://github.com/immobiliare/standard-version/issues/573)) ([3bbba02](https://github.com/immobiliare/standard-version/commit/3bbba025057ba40c3e15880fede2af851841165b))
 
-### [9.1.1](https://github.com/immobiliare/standard-version/compare/v9.1.0...v9.1.1) (2021-02-17)
+
+
+## 9.1.1 (2021-02-17)
 
 
 ### Bug Fixes
@@ -63,12 +104,9 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps:** update dependency conventional-recommended-bump to v6.1.0 ([#695](https://github.com/immobiliare/standard-version/issues/695)) ([65dd070](https://github.com/immobiliare/standard-version/commit/65dd070b9f01ffe1764e64ba739bc064b84f4129))
 * **deps:** update dependency yargs to v16 ([#660](https://github.com/immobiliare/standard-version/issues/660)) ([f6a7430](https://github.com/immobiliare/standard-version/commit/f6a7430329919874e1e744ac5dca2f83bba355df))
 
-## [9.1.0](https://github.com/immobiliare/standard-version/compare/v9.0.0...v9.1.0) (2020-12-30)
 
 
-### Features
-
-* support custom updater as object as well as path ([#630](https://github.com/immobiliare/standard-version/issues/630)) ([55bbde8](https://github.com/immobiliare/standard-version/commit/55bbde8476013de7a2f24bf29c7c12cb07f96e3f))
+# 9.1.0 (2020-12-30)
 
 
 ### Bug Fixes
@@ -78,12 +116,15 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps:** update dependency conventional-recommended-bump to v6.0.11 ([#679](https://github.com/immobiliare/standard-version/issues/679)) ([360789a](https://github.com/immobiliare/standard-version/commit/360789ab84957a67d3919cb28db1882cb68296fc))
 * **deps:** update dependency find-up to v5 ([#651](https://github.com/immobiliare/standard-version/issues/651)) ([df8db83](https://github.com/immobiliare/standard-version/commit/df8db832327a751d5c62fe361b6ac2d2b5f66bf6))
 
-## [9.0.0](https://github.com/immobiliare/standard-version/compare/v8.0.2...v9.0.0) (2020-08-15)
+
+### Features
+
+* support custom updater as object as well as path ([#630](https://github.com/immobiliare/standard-version/issues/630)) ([55bbde8](https://github.com/immobiliare/standard-version/commit/55bbde8476013de7a2f24bf29c7c12cb07f96e3f))
 
 
-### ⚠ BREAKING CHANGES
 
-* NodeJS@8 is no longer supported. (#612)
+# 9.0.0 (2020-08-15)
+
 
 ### Bug Fixes
 
@@ -92,18 +133,17 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps:** update dependency conventional-recommended-bump to v6.0.10 ([#653](https://github.com/immobiliare/standard-version/issues/653)) ([c360d6a](https://github.com/immobiliare/standard-version/commit/c360d6a307909c6e571b29d4a329fd786b4d4543))
 
 
-### Build System
 
-* NodeJS@8 is no longer supported. ([#612](https://github.com/immobiliare/standard-version/issues/612)) ([05edef2](https://github.com/immobiliare/standard-version/commit/05edef2de79d8d4939a6e699ce0979ff8da12de9))
-
-### [8.0.2](https://github.com/immobiliare/standard-version/compare/v8.0.1...v8.0.2) (2020-07-14)
+## 8.0.2 (2020-07-14)
 
 
 ### Bug Fixes
 
 * Commit message and tag name is no longer enclosed in quotes. ([#619](https://github.com/immobiliare/standard-version/issues/619)) ([ae032bf](https://github.com/immobiliare/standard-version/commit/ae032bfa9268a0a14351b0d78b6deedee7891e3a)), closes [#621](https://github.com/immobiliare/standard-version/issues/621) [#620](https://github.com/immobiliare/standard-version/issues/620)
 
-### [8.0.1](https://github.com/immobiliare/standard-version/compare/v8.0.0...v8.0.1) (2020-07-12)
+
+
+## 8.0.1 (2020-07-12)
 
 
 ### Bug Fixes
@@ -114,27 +154,28 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps:** update dependency git-semver-tags to v4 ([#589](https://github.com/immobiliare/standard-version/issues/589)) ([a0f0e81](https://github.com/immobiliare/standard-version/commit/a0f0e813b2be4a2065600a19075fda4d6f331ef8))
 * Vulnerability Report GHSL-2020-11101 ([9d978ac](https://github.com/immobiliare/standard-version/commit/9d978ac9d4f64be4c7b9d514712ab3757732d561))
 
-## [8.0.0](https://github.com/immobiliare/standard-version/compare/v7.1.0...v8.0.0) (2020-05-06)
 
 
-### ⚠ BREAKING CHANGES
+# 8.0.0 (2020-05-06)
 
-* `composer.json` and `composer.lock` will no longer be read from or bumped by default. If you need to obtain a version or write a version to these files, please use `bumpFiles` and/or `packageFiles` options accordingly.
 
 ### Bug Fixes
 
-* composer.json and composer.lock have been removed from default package and bump files. ([c934f3a](https://github.com/immobiliare/standard-version/commit/c934f3a38da4e7234d9dba3b2405f3b7e4dc5aa8)), closes [#495](https://github.com/immobiliare/standard-version/issues/495) [#394](https://github.com/immobiliare/standard-version/issues/394)
 * **deps:** update dependency conventional-changelog to v3.1.18 ([#510](https://github.com/immobiliare/standard-version/issues/510)) ([e6aeb77](https://github.com/immobiliare/standard-version/commit/e6aeb779fe53ffed2a252e6cfd69cfcb786b9ef9))
 * **deps:** update dependency yargs to v15.1.0 ([#518](https://github.com/immobiliare/standard-version/issues/518)) ([8f36f9e](https://github.com/immobiliare/standard-version/commit/8f36f9e073119fcbf5ad843237fb06a4ca42a0f9))
 * **deps:** update dependency yargs to v15.3.1 ([#559](https://github.com/immobiliare/standard-version/issues/559)) ([d98cd46](https://github.com/immobiliare/standard-version/commit/d98cd4674b4d074c0b7f4d50d052ae618cf494c6))
 
-## [7.1.0](https://github.com/immobiliare/standard-version/compare/v7.0.1...v7.1.0) (2019-12-08)
+
+* fix!: composer.json and composer.lock have been removed from default package and bump files. ([c934f3a](https://github.com/immobiliare/standard-version/commit/c934f3a38da4e7234d9dba3b2405f3b7e4dc5aa8)), closes [#495](https://github.com/immobiliare/standard-version/issues/495) [#394](https://github.com/immobiliare/standard-version/issues/394)
 
 
-### Features
+### BREAKING CHANGES
 
-* Adds support for `header` (--header) configuration based on the spec. ([#364](https://github.com/immobiliare/standard-version/issues/364)) ([ba80a0c](https://github.com/immobiliare/standard-version/commit/ba80a0c27029f54c751fe845560504925b45eab8))
-* custom 'bumpFiles' and 'packageFiles' support ([#372](https://github.com/immobiliare/standard-version/issues/372)) ([564d948](https://github.com/immobiliare/standard-version/commit/564d9482a459d5d7a2020c2972b4d39167ded4bf))
+* `composer.json` and `composer.lock` will no longer be read from or bumped by default. If you need to obtain a version or write a version to these files, please use `bumpFiles` and/or `packageFiles` options accordingly.
+
+
+
+# 7.1.0 (2019-12-08)
 
 
 ### Bug Fixes
@@ -150,7 +191,20 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps:** update dependency yargs to v15 ([#484](https://github.com/immobiliare/standard-version/issues/484)) ([35b90c3](https://github.com/immobiliare/standard-version/commit/35b90c3f24cfb8237e94482fd20997900569193e))
 * use require.resolve for the default preset ([#465](https://github.com/immobiliare/standard-version/issues/465)) ([d557372](https://github.com/immobiliare/standard-version/commit/d55737239530f5eee684e9cbf959f7238d609fd4))
 
-### [7.0.1](https://github.com/immobiliare/standard-version/compare/v7.0.0...v7.0.1) (2019-11-07)
+
+### Features
+
+* Adds support for `header` (--header) configuration based on the spec. ([#364](https://github.com/immobiliare/standard-version/issues/364)) ([ba80a0c](https://github.com/immobiliare/standard-version/commit/ba80a0c27029f54c751fe845560504925b45eab8))
+* custom 'bumpFiles' and 'packageFiles' support ([#372](https://github.com/immobiliare/standard-version/issues/372)) ([564d948](https://github.com/immobiliare/standard-version/commit/564d9482a459d5d7a2020c2972b4d39167ded4bf))
+
+
+### Reverts
+
+* "chore(deps): bump conventional-changelog to v3.1.17" ([00512d0](https://github.com/immobiliare/standard-version/commit/00512d08eb3197d7b20a2f09894ed1a6ae4af272))
+
+
+
+## 7.0.1 (2019-11-07)
 
 
 ### Bug Fixes
@@ -162,12 +216,10 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps:** update dependency yargs to v14 ([#440](https://github.com/immobiliare/standard-version/issues/440)) ([fe37e73](https://github.com/immobiliare/standard-version/commit/fe37e7390760d8d16d1b94ca58d8123e292c46a8))
 * **deps:** update dependency yargs to v14.2.0 ([#461](https://github.com/immobiliare/standard-version/issues/461)) ([fb21851](https://github.com/immobiliare/standard-version/commit/fb2185107a90ba4b9dc7c9c1d873ed1283706ac1))
 
-## [7.0.0](https://github.com/immobiliare/standard-version/compare/v6.0.1...v7.0.0) (2019-07-30)
 
 
-### ⚠ BREAKING CHANGES
+# 7.0.0 (2019-07-30)
 
-* we were accepting .version.json as a config file, rather than .versionrc.json
 
 ### Bug Fixes
 
@@ -187,29 +239,23 @@ All notable changes to this project will be documented in this file. See [standa
 * update config file name in command based on README.md ([#357](https://github.com/immobiliare/standard-version/issues/357)) ([ce44dd2](https://github.com/immobiliare/standard-version/commit/ce44dd26deb6d6b0335cd6be2995bf7d2cc8d72a))
 * Updates package.json to _actual_ supported (tested) NodeJS versions. ([#379](https://github.com/immobiliare/standard-version/issues/379)) ([15eec8a](https://github.com/immobiliare/standard-version/commit/15eec8a1143dbd99e6d1b80a856cd4859fa13480))
 
-### [6.0.1](https://github.com/immobiliare/standard-version/compare/v6.0.0...v6.0.1) (2019-05-05)
+
+### BREAKING CHANGES
+
+* we were accepting .version.json as a config file, rather than .versionrc.json
+
+
+
+## 6.0.1 (2019-05-05)
 
 
 ### Bug Fixes
 
 * don't pass args to git rev-parse ([1ac72f7](https://github.com/immobiliare/standard-version/commit/1ac72f74fe447121c0096915955732f7d84b5dc3))
 
-## [6.0.0](https://github.com/immobiliare/standard-version/compare/v5.0.2...v6.0.0) (2019-05-05)
 
 
-### ⚠ BREAKING CHANGES
-
-* we now bump the minor rather than major if version < 1.0.0; --release-as can be used to bump to 1.0.0.
-* tests are no longer run for Node 6
-* we now use the conventionalcommits preset by default, which directly tracks conventionalcommits.org.
-
-### Features
-
-* adds configurable conventionalcommits preset ([#323](https://github.com/immobiliare/standard-version/issues/323)) ([4fcd4a7](https://github.com/immobiliare/standard-version/commit/4fcd4a7edabbfe4183fbaa7fcd0f55b2441449d1))
-* allow a user to provide a custom changelog header ([#335](https://github.com/immobiliare/standard-version/issues/335)) ([1c51064](https://github.com/immobiliare/standard-version/commit/1c5106477a052f224771b0a61405d279b611608c))
-* bump minor rather than major, if release is < 1.0.0 ([#347](https://github.com/immobiliare/standard-version/issues/347)) ([5d972cf](https://github.com/immobiliare/standard-version/commit/5d972cf1fede448001e30283e3258d07bed41658))
-* suggest branch name other than master ([#331](https://github.com/immobiliare/standard-version/issues/331)) ([304b49a](https://github.com/immobiliare/standard-version/commit/304b49a7ffdf3adf8fc3e3234e11455b05062c2a))
-* update commit msg for when using commitAll ([#320](https://github.com/immobiliare/standard-version/issues/320)) ([74a040a](https://github.com/immobiliare/standard-version/commit/74a040a517e489111709c5acd7826543ad814af0))
+# 6.0.0 (2019-05-05)
 
 
 ### Bug Fixes
@@ -223,33 +269,40 @@ All notable changes to this project will be documented in this file. See [standa
 * prevent duplicate headers from being added ([#305](https://github.com/immobiliare/standard-version/issues/305)) ([#307](https://github.com/immobiliare/standard-version/issues/307)) ([db2c6e5](https://github.com/immobiliare/standard-version/commit/db2c6e5459a01f005c09e39900bae0ff93400534))
 
 
-### Build System
+* feat!: bump minor rather than major, if release is < 1.0.0 (#347) ([5d972cf](https://github.com/immobiliare/standard-version/commit/5d972cf1fede448001e30283e3258d07bed41658)), closes [#347](https://github.com/immobiliare/standard-version/issues/347)
+* build!: drop Node 6 from testing matrix (#346) ([6718428](https://github.com/immobiliare/standard-version/commit/671842853b9fa62ecda126bf5e1fbe7aa60a5d1f)), closes [#346](https://github.com/immobiliare/standard-version/issues/346)
+* feat!: adds configurable conventionalcommits preset (#323) ([4fcd4a7](https://github.com/immobiliare/standard-version/commit/4fcd4a7edabbfe4183fbaa7fcd0f55b2441449d1)), closes [#323](https://github.com/immobiliare/standard-version/issues/323)
 
-* drop Node 6 from testing matrix ([#346](https://github.com/immobiliare/standard-version/issues/346)) ([6718428](https://github.com/immobiliare/standard-version/commit/671842853b9fa62ecda126bf5e1fbe7aa60a5d1f))
 
-### [5.0.2](https://github.com/immobiliare/standard-version/compare/v5.0.1...v5.0.2) (2019-03-16)
+### Features
 
-### [5.0.1](https://github.com/immobiliare/standard-version/compare/v5.0.0...v5.0.1) (2019-02-28)
+* allow a user to provide a custom changelog header ([#335](https://github.com/immobiliare/standard-version/issues/335)) ([1c51064](https://github.com/immobiliare/standard-version/commit/1c5106477a052f224771b0a61405d279b611608c))
+* suggest branch name other than master ([#331](https://github.com/immobiliare/standard-version/issues/331)) ([304b49a](https://github.com/immobiliare/standard-version/commit/304b49a7ffdf3adf8fc3e3234e11455b05062c2a))
+* update commit msg for when using commitAll ([#320](https://github.com/immobiliare/standard-version/issues/320)) ([74a040a](https://github.com/immobiliare/standard-version/commit/74a040a517e489111709c5acd7826543ad814af0))
+
+
+### BREAKING CHANGES
+
+* we now bump the minor rather than major if version < 1.0.0; --release-as can be used to bump to 1.0.0.
+* tests are no longer run for Node 6
+* we now use the conventionalcommits preset by default, which directly tracks conventionalcommits.org.
+
+
+
+## 5.0.2 (2019-03-16)
+
+
+
+## 5.0.1 (2019-02-28)
 
 
 ### Bug Fixes
 
 * make pattern for finding CHANGELOG sections work for non anchors ([#292](https://github.com/immobiliare/standard-version/issues/292)) ([b684c78](https://github.com/immobiliare/standard-version/commit/b684c784c8986226889feb1524bc029b913c9571))
 
-## [5.0.0](https://github.com/immobiliare/standard-version/compare/v4.4.0...v5.0.0) (2019-02-14)
 
 
-### ⚠ BREAKING CHANGES
-
-* if no package.json, bower.json, etc., is found, we now fallback to git tags
-* removed Node 4/5 from testing matrix
-
-### Features
-
-* adds support for bumping for composer versions ([#262](https://github.com/immobiliare/standard-version/issues/262)) ([fee872f](https://github.com/immobiliare/standard-version/commit/fee872f4e44a6f975ce93b2d670a671bcdf542a2))
-* cli application accept path/preset option ([#279](https://github.com/immobiliare/standard-version/issues/279)) ([69c62cf](https://github.com/immobiliare/standard-version/commit/69c62cfbddea7ce5e9b307f5167e20aee63a87da))
-* fallback to tags if no meta-information file found ([#275](https://github.com/immobiliare/standard-version/issues/275)) ([844cde6](https://github.com/immobiliare/standard-version/commit/844cde69658c59051183aa86c6dd85a5c059e55c))
-* preserve formatting when writing to package.json ([#282](https://github.com/immobiliare/standard-version/issues/282)) ([96216da](https://github.com/immobiliare/standard-version/commit/96216da5f7a9a8cb02b67d9478a1f20e513f9859))
+# 5.0.0 (2019-02-14)
 
 
 ### Bug Fixes
@@ -263,7 +316,29 @@ All notable changes to this project will be documented in this file. See [standa
 
 * update testing matrix ([1d46627](https://github.com/immobiliare/standard-version/commit/1d466275518ae2649758b9e0e9b3c848734f534f))
 
-## [4.4.0](https://github.com/immobiliare/standard-version/compare/v4.3.0...v4.4.0) (2018-05-21)
+
+### Features
+
+* adds support for bumping for composer versions ([#262](https://github.com/immobiliare/standard-version/issues/262)) ([fee872f](https://github.com/immobiliare/standard-version/commit/fee872f4e44a6f975ce93b2d670a671bcdf542a2))
+* cli application accept path/preset option ([#279](https://github.com/immobiliare/standard-version/issues/279)) ([69c62cf](https://github.com/immobiliare/standard-version/commit/69c62cfbddea7ce5e9b307f5167e20aee63a87da))
+* fallback to tags if no meta-information file found ([#275](https://github.com/immobiliare/standard-version/issues/275)) ([844cde6](https://github.com/immobiliare/standard-version/commit/844cde69658c59051183aa86c6dd85a5c059e55c))
+* preserve formatting when writing to package.json ([#282](https://github.com/immobiliare/standard-version/issues/282)) ([96216da](https://github.com/immobiliare/standard-version/commit/96216da5f7a9a8cb02b67d9478a1f20e513f9859))
+
+
+### BREAKING CHANGES
+
+* if no package.json, bower.json, etc., is found, we now fallback to git tags
+* removed Node 4/5 from testing matrix
+
+
+
+# 4.4.0 (2018-05-21)
+
+
+### Bug Fixes
+
+* show full tag name in checkpoint ([#241](https://github.com/immobiliare/standard-version/issues/241)) ([b4ed4f9](https://github.com/immobiliare/standard-version/commit/b4ed4f9ba9a905c4d36804f6e42e07d510499543))
+* use tagPrefix in CHANGELOG lifecycle step ([#243](https://github.com/immobiliare/standard-version/issues/243)) ([a56c7ac](https://github.com/immobiliare/standard-version/commit/a56c7ac78f9d7f6b4fb043d135b5e3d9ada89c70))
 
 
 ### Features
@@ -272,12 +347,14 @@ All notable changes to this project will be documented in this file. See [standa
 * manifest.json support ([#236](https://github.com/immobiliare/standard-version/issues/236)) ([371d992](https://github.com/immobiliare/standard-version/commit/371d99290164cf16dd0aa26d094215d49688f54f))
 
 
+
+# 4.3.0 (2018-01-03)
+
+
 ### Bug Fixes
 
-* show full tag name in checkpoint ([#241](https://github.com/immobiliare/standard-version/issues/241)) ([b4ed4f9](https://github.com/immobiliare/standard-version/commit/b4ed4f9ba9a905c4d36804f6e42e07d510499543))
-* use tagPrefix in CHANGELOG lifecycle step ([#243](https://github.com/immobiliare/standard-version/issues/243)) ([a56c7ac](https://github.com/immobiliare/standard-version/commit/a56c7ac78f9d7f6b4fb043d135b5e3d9ada89c70))
-
-## [4.3.0](https://github.com/immobiliare/standard-version/compare/v4.2.0...v4.3.0) (2018-01-03)
+* recommend `--tag` prerelease for npm publish of prereleases ([#196](https://github.com/immobiliare/standard-version/issues/196)) ([709dae1](https://github.com/immobiliare/standard-version/commit/709dae168069930e38b18d8ed0fb07addc9540b6)), closes [#183](https://github.com/immobiliare/standard-version/issues/183)
+* use the `skip` default value for skip cli arg ([#211](https://github.com/immobiliare/standard-version/issues/211)) ([3fdd7fa](https://github.com/immobiliare/standard-version/commit/3fdd7fa22fa40f2e9f899aac24493f391e72a074))
 
 
 ### Features
@@ -287,19 +364,17 @@ All notable changes to this project will be documented in this file. See [standa
 * publish only if commit+push succeed ([#229](https://github.com/immobiliare/standard-version/issues/229)) ([c5e1ee2](https://github.com/immobiliare/standard-version/commit/c5e1ee2a63a3488484f5392a5180cf97026f948d))
 
 
-### Bug Fixes
 
-* recommend `--tag` prerelease for npm publish of prereleases ([#196](https://github.com/immobiliare/standard-version/issues/196)) ([709dae1](https://github.com/immobiliare/standard-version/commit/709dae168069930e38b18d8ed0fb07addc9540b6)), closes [#183](https://github.com/immobiliare/standard-version/issues/183)
-* use the `skip` default value for skip cli arg ([#211](https://github.com/immobiliare/standard-version/issues/211)) ([3fdd7fa](https://github.com/immobiliare/standard-version/commit/3fdd7fa22fa40f2e9f899aac24493f391e72a074))
-
-## [4.2.0](https://github.com/immobiliare/standard-version/compare/v4.1.0...v4.2.0) (2017-06-12)
+# 4.2.0 (2017-06-12)
 
 
 ### Features
 
 * add support for `package-lock.json` ([#190](https://github.com/immobiliare/standard-version/issues/190)) ([bc0fc53](https://github.com/immobiliare/standard-version/commit/bc0fc533d8ee2dd288ed54ead70646e94ea5d847))
 
-## [4.1.0](https://github.com/immobiliare/standard-version/compare/v4.0.0...v4.1.0) (2017-06-06)
+
+
+# 4.1.0 (2017-06-06)
 
 
 ### Features
@@ -311,9 +386,18 @@ All notable changes to this project will be documented in this file. See [standa
 * allow a version # to be provided for release-as, rather than just major, minor, patch. ([13eb9cd](https://github.com/immobiliare/standard-version/commit/13eb9cd47d780f90938c1c447a31149d2f02baea))
 * **cli:** print error and don't run with node <4, closes [#124](https://github.com/immobiliare/standard-version/issues/124) ([d0d71a5](https://github.com/immobiliare/standard-version/commit/d0d71a54f6769c6945e4c6e8f5aee9f3e59b29e2))
 
-## [4.0.0](https://github.com/immobiliare/standard-version/compare/v4.0.0-1...v4.0.0) (2016-12-02)
 
-## [4.0.0-1](https://github.com/immobiliare/standard-version/compare/v4.0.0-0...v4.0.0-1) (2016-11-27)
+
+# 4.0.0 (2016-12-02)
+
+
+
+# 4.0.0-1 (2016-11-27)
+
+
+### Bug Fixes
+
+* should print message before we bump version ([2894bbc](https://github.com/immobiliare/standard-version/commit/2894bbc6998e7723eb658debe2a00e707cb3116a))
 
 
 ### Features
@@ -322,20 +406,8 @@ All notable changes to this project will be documented in this file. See [standa
 * make tag prefix configurable ([#143](https://github.com/immobiliare/standard-version/issues/143)) ([70b20c8](https://github.com/immobiliare/standard-version/commit/70b20c8793e63483eb76e95c6495f03b8dd3dd89))
 
 
-### Bug Fixes
 
-* should print message before we bump version ([2894bbc](https://github.com/immobiliare/standard-version/commit/2894bbc6998e7723eb658debe2a00e707cb3116a))
-
-## [4.0.0-0](https://github.com/immobiliare/standard-version/compare/v3.0.0...v4.0.0-0) (2016-11-26)
-
-
-### ⚠ BREAKING CHANGES
-
-* merge commits are now included in the CHANGELOG.
-
-### Features
-
-* support releasing a custom version, including pre-releases ([#129](https://github.com/immobiliare/standard-version/issues/129)) ([068008d](https://github.com/immobiliare/standard-version/commit/068008d6a568033f4ace85dea8911031b3dc96ca))
+# 4.0.0-0 (2016-11-26)
 
 
 ### Bug Fixes
@@ -343,19 +415,19 @@ All notable changes to this project will be documented in this file. See [standa
 * include merge commits in the changelog ([#139](https://github.com/immobiliare/standard-version/issues/139)) ([b6e1562](https://github.com/immobiliare/standard-version/commit/b6e1562808cdc712e157dbb1d6607f0624981f66))
 * support a wording change made to git status in git v2.9.1 ([#140](https://github.com/immobiliare/standard-version/issues/140)) ([80004ec](https://github.com/immobiliare/standard-version/commit/80004ec1d6b927354358d9998e6058cb51b4565b))
 
-## [3.0.0](https://github.com/immobiliare/standard-version/compare/v2.4.0...v3.0.0) (2016-10-06)
-
-
-### ⚠ BREAKING CHANGES
-
-* drop support for Node < 4.0 to enable usage of
-new tools and packages.
 
 ### Features
 
-* added support for commitAll option in CLI ([#121](https://github.com/immobiliare/standard-version/issues/121)) ([a903f4d](https://github.com/immobiliare/standard-version/commit/a903f4d66caa8f5f334a85c1f21dce8a8d74ca48))
-* **options:** add --silent flag and option for squelching output ([2a3fa61](https://github.com/immobiliare/standard-version/commit/2a3fa6167bd84466485d7d7c3ea2e3a62e41a0ff))
-* separate cli and defaults from base functionality ([34a6a4e](https://github.com/immobiliare/standard-version/commit/34a6a4ea23c1f56d923a8bbe004bf57fecc6badd))
+* support releasing a custom version, including pre-releases ([#129](https://github.com/immobiliare/standard-version/issues/129)) ([068008d](https://github.com/immobiliare/standard-version/commit/068008d6a568033f4ace85dea8911031b3dc96ca))
+
+
+### BREAKING CHANGES
+
+* merge commits are now included in the CHANGELOG.
+
+
+
+# 3.0.0 (2016-10-06)
 
 
 ### Bug Fixes
@@ -368,7 +440,27 @@ new tools and packages.
 
 * package.json engines field >=4.0, drop Node 0.10 and 0.12 ([28ff65a](https://github.com/immobiliare/standard-version/commit/28ff65a69cee682db05f899aafae8c2b6f1e4ccb))
 
-## [2.4.0](https://github.com/immobiliare/standard-version/compare/v2.3.1...v2.4.0) (2016-07-13)
+
+### Features
+
+* added support for commitAll option in CLI ([#121](https://github.com/immobiliare/standard-version/issues/121)) ([a903f4d](https://github.com/immobiliare/standard-version/commit/a903f4d66caa8f5f334a85c1f21dce8a8d74ca48))
+* **options:** add --silent flag and option for squelching output ([2a3fa61](https://github.com/immobiliare/standard-version/commit/2a3fa6167bd84466485d7d7c3ea2e3a62e41a0ff))
+* separate cli and defaults from base functionality ([34a6a4e](https://github.com/immobiliare/standard-version/commit/34a6a4ea23c1f56d923a8bbe004bf57fecc6badd))
+
+
+### BREAKING CHANGES
+
+* drop support for Node < 4.0 to enable usage of
+new tools and packages.
+
+
+
+# 2.4.0 (2016-07-13)
+
+
+### Bug Fixes
+
+* **index.js:** use blue figures.info for last checkpoint ([#64](https://github.com/immobiliare/standard-version/issues/64)) ([e600b42](https://github.com/immobiliare/standard-version/commit/e600b42968456ae96ab6af9965758ea93b1c0181))
 
 
 ### Features
@@ -376,18 +468,22 @@ new tools and packages.
 * **changelogStream:** use more default opts ([#67](https://github.com/immobiliare/standard-version/issues/67)) ([3e0aa84](https://github.com/immobiliare/standard-version/commit/3e0aa84fe5fe4ee55cac51f4e9c4033eaaeeae6e))
 
 
-### Bug Fixes
 
-* **index.js:** use blue figures.info for last checkpoint ([#64](https://github.com/immobiliare/standard-version/issues/64)) ([e600b42](https://github.com/immobiliare/standard-version/commit/e600b42968456ae96ab6af9965758ea93b1c0181))
-
-### [2.3.1](https://github.com/immobiliare/standard-version/compare/v2.3.0...v2.3.1) (2016-06-15)
+## 2.3.1 (2016-06-15)
 
 
 ### Bug Fixes
 
 * **commit:** fix windows by separating add and commit exec ([#55](https://github.com/immobiliare/standard-version/issues/55)) ([f361c46](https://github.com/immobiliare/standard-version/commit/f361c465f87078467b597804a5d5b1a937ccc3c3)), closes [#49](https://github.com/immobiliare/standard-version/issues/49)
 
-## [2.3.0](https://github.com/immobiliare/standard-version/compare/v2.2.1...v2.3.0) (2016-06-02)
+
+
+# 2.3.0 (2016-06-02)
+
+
+### Bug Fixes
+
+* append line feed to end of package.json ([#42](https://github.com/immobiliare/standard-version/issues/42)) ([178e001](https://github.com/immobiliare/standard-version/commit/178e00196af696c4bab3dec62df38b658aa7b543))
 
 
 ### Features
@@ -396,23 +492,17 @@ new tools and packages.
 * **index.js:** add checkpoint for publish script after tag successfully ([#47](https://github.com/immobiliare/standard-version/issues/47)) ([e414ed7](https://github.com/immobiliare/standard-version/commit/e414ed7d5e889d1af256b065fe5619e4a16b6a6f))
 
 
-### Bug Fixes
 
-* append line feed to end of package.json ([#42](https://github.com/immobiliare/standard-version/issues/42)) ([178e001](https://github.com/immobiliare/standard-version/commit/178e00196af696c4bab3dec62df38b658aa7b543))
-
-### [2.2.1](https://github.com/immobiliare/standard-version/compare/v2.2.0...v2.2.1) (2016-05-02)
+## 2.2.1 (2016-05-02)
 
 
 ### Bug Fixes
 
 * upgrade to version of nyc that works with new shelljs ([c7ac6e2](https://github.com/immobiliare/standard-version/commit/c7ac6e298ecb3a9e757fbe502cb6078df350780f))
 
-## [2.2.0](https://github.com/immobiliare/standard-version/compare/v2.1.2...v2.2.0) (2016-05-01)
 
 
-### Features
-
-* add --sign flag to sign git commit and tag ([#29](https://github.com/immobiliare/standard-version/issues/29)) ([de758bc](https://github.com/immobiliare/standard-version/commit/de758bcda0e898d28b4c2539c7cf436bb2ff9116))
+# 2.2.0 (2016-05-01)
 
 
 ### Bug Fixes
@@ -420,37 +510,53 @@ new tools and packages.
 * format the annotated tag message ([#28](https://github.com/immobiliare/standard-version/issues/28)) ([8f02736](https://github.com/immobiliare/standard-version/commit/8f0273676c7a78b69ed097e08fe6d886bfea8575))
 * upgraded dependencies, switched back to angular format (fixes [#27](https://github.com/immobiliare/standard-version/issues/27)), pinned shelljs to version that works with nyc ([#30](https://github.com/immobiliare/standard-version/issues/30)) ([3f51e94](https://github.com/immobiliare/standard-version/commit/3f51e9438fb5ff7f68278d1993c34b9d95c1638c))
 
-### [2.1.2](https://github.com/immobiliare/standard-version/compare/v2.1.1...v2.1.2) (2016-04-11)
+
+### Features
+
+* add --sign flag to sign git commit and tag ([#29](https://github.com/immobiliare/standard-version/issues/29)) ([de758bc](https://github.com/immobiliare/standard-version/commit/de758bcda0e898d28b4c2539c7cf436bb2ff9116))
+
+
+
+## 2.1.2 (2016-04-11)
 
 
 ### Bug Fixes
 
 * we had too many \n characters ([#17](https://github.com/immobiliare/standard-version/issues/17)) ([67a01cd](https://github.com/immobiliare/standard-version/commit/67a01cd78217acb74eed75b8c9441f6595142cdb))
 
-### [2.1.1](https://github.com/immobiliare/standard-version/compare/v2.1.0...v2.1.1) (2016-04-10)
+
+
+## 2.1.1 (2016-04-10)
 
 
 ### Bug Fixes
 
 * **docs:** had a bad URL in package.json, which was breaking all of our links ([caa6359](https://github.com/immobiliare/standard-version/commit/caa63593efd0d6ccaf3f067b0d8fbc8051f94339))
 
-## [2.1.0](https://github.com/immobiliare/standard-version/compare/v2.0.0...v2.1.0) (2016-04-10)
+
+
+# 2.1.0 (2016-04-10)
 
 
 ### Features
 
 * adds support for GitHub links (see [#13](https://github.com/immobiliare/standard-version/issues/13)), great idea [@bcoe](https://github.com/bcoe)! ([7bf6597](https://github.com/immobiliare/standard-version/commit/7bf6597e60f191192d65b5ed4b3ee8d50d83f7c5))
 
-## [2.0.0](https://github.com/immobiliare/standard-version/compare/v1.1.0...v2.0.0) (2016-04-09)
 
 
-### ⚠ BREAKING CHANGES
+# 2.0.0 (2016-04-09)
 
-* Move to conventional-changelog-standard style. This style lifts the character limit on commit messages, and puts us in a position to make more opinionated decisions in the future.
 
 * feat(conventional-changelog-standard): ([c7ccadb](https://github.com/immobiliare/standard-version/commit/c7ccadba80bab7a46aa50f518f22605a8ddc7be1))
 
-## [1.1.0](https://github.com/immobiliare/standard-version/compare/v1.0.0...v1.1.0) (2016-04-08)
+
+### BREAKING CHANGES
+
+* Move to conventional-changelog-standard style. This style lifts the character limit on commit messages, and puts us in a position to make more opinionated decisions in the future.
+
+
+
+# 1.1.0 (2016-04-08)
 
 
 ### Features
