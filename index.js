@@ -2,7 +2,7 @@ const bump = require('./lib/lifecycles/bump');
 const changelog = require('./lib/lifecycles/changelog');
 const commit = require('./lib/lifecycles/commit');
 const fs = require('fs');
-const latestSemverTag = require('./lib/latest-semver-tag');
+const { latestSemverTag } = require('./lib/latest-semver-tag');
 const path = require('path');
 const printError = require('./lib/print-error');
 const tag = require('./lib/lifecycles/tag');
@@ -68,10 +68,10 @@ module.exports = async function standardVersion(argv) {
             ? updater.updater.isPrivate(contents)
             : false,
       };
-      break;
       // eslint-disable-next-line no-empty
     } catch {}
   }
+
   try {
     let version;
     if (pkg) {
@@ -84,47 +84,8 @@ module.exports = async function standardVersion(argv) {
       throw new Error('no package file found');
     }
 
-    const versions = await latestSemverTag(0, {
-      changelogIncludesPrereleases: args.changelogIncludesPrereleases,
-      withPrefix: true,
-      tagPrefix: args.tagPrefix,
-    });
-
-    // When using this feature the whole changelog is regenerated
-    // this is usefull/needed when using standard-version on an existing project
-    // with a previeous changelog and you want to recreate it using the new format
-    if (args.regenerateChangelog) {
-      return {
-        changelog: await changelog(
-          {
-            ...args,
-            changelogIncludesPrereleases: args.changelogIncludesPrereleases,
-            gitSemverTags: versions,
-          },
-          versions[0],
-          versions[versions.length - 1]
-        ),
-      };
-    }
-
     const newVersion = await bump(args, version);
-
-    // the new version is not there if for example we're dry-running
-    if (versions[0] !== newVersion) {
-      versions.unshift(newVersion);
-    }
-
-    const generatedChangelog = await changelog(
-      {
-        ...args,
-        changelogIncludesPrereleases: args.changelogIncludesPrereleases,
-        gitSemverTags: versions,
-      },
-      newVersion,
-      // provide the old version only if we're on doing tag-to-tag changelog
-      // this is to maintain backward compatibility with existing behaviour
-      !args.changelogIncludesPrereleases ? versions[1] : undefined // oldVersion
-    );
+    const generatedChangelog = await changelog(args, newVersion);
     const commitMsg = await commit(args, newVersion);
     await tag(newVersion, pkg ? pkg.private : false, args);
     return {
