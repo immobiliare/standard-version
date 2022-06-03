@@ -1,3 +1,22 @@
+# [10.0.0](https://github.com/immobiliare/standard-version/compare/v9.5.0...v10.0.0) (2022-06-03)
+
+
+### Bug Fixes
+
+* adds new options as command flags ([95a3d46](https://github.com/immobiliare/standard-version/commit/95a3d46b591b5190755d5ad305f3fe1d55bfef98))
+* removes compact changelog ([5a6ff22](https://github.com/immobiliare/standard-version/commit/5a6ff2273695b5e828dacf12447f6818c9c7b7b9))
+
+
+### Features
+
+* promise returns release informatin ([eb33e1f](https://github.com/immobiliare/standard-version/commit/eb33e1f03f8bdf62c30fd77e027137646490d7b2))
+* regenerate full changelog ([a6dc99b](https://github.com/immobiliare/standard-version/commit/a6dc99b622ac33f20e5993b7d31527ddb778d139))
+
+
+### BREAKING CHANGES
+
+* Major v10
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
