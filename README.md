@@ -16,32 +16,32 @@ _Having problems? Want to contribute? Open a issue!_
 <!-- toc -->
 
 - [How It Works](#how-it-works)
-  * [`bumpFiles`, `packageFiles` and `updaters`](#bumpfiles-packagefiles-and-updaters)
+  - [`bumpFiles`, `packageFiles` and `updaters`](#bumpfiles-packagefiles-and-updaters)
 - [Installing `@immobiliarelabs/standard-version`](#installing-immobiliarelabsstandard-version)
-  * [As a local `npm run` script](#as-a-local-npm-run-script)
-  * [As global `bin`](#as-global-bin)
-  * [Using `npx`](#using-npx)
+  - [As a local `npm run` script](#as-a-local-npm-run-script)
+  - [As global `bin`](#as-global-bin)
+  - [Using `npx`](#using-npx)
 - [Configuration](#configuration)
-  * [Customizing CHANGELOG Generation](#customizing-changelog-generation)
+  - [Customizing CHANGELOG Generation](#customizing-changelog-generation)
 - [CLI Usage](#cli-usage)
-  * [First Release](#first-release)
-  * [Cutting Releases](#cutting-releases)
-  * [Release as a Pre-Release](#release-as-a-pre-release)
-  * [Release as a Target Type Imperatively (`npm version`-like)](#release-as-a-target-type-imperatively-npm-version-like)
-  * [Prevent Git Hooks](#prevent-git-hooks)
-  * [Signing Commits and Tags](#signing-commits-and-tags)
-  * [Lifecycle Scripts](#lifecycle-scripts)
-  * [Skipping Lifecycle Steps](#skipping-lifecycle-steps)
-  * [Committing Generated Artifacts in the Release Commit](#committing-generated-artifacts-in-the-release-commit)
-  * [Dry Run Mode](#dry-run-mode)
-  * [Prefix Tags](#prefix-tags)
-  * [CLI Help](#cli-help)
+  - [First Release](#first-release)
+  - [Cutting Releases](#cutting-releases)
+  - [Release as a Pre-Release](#release-as-a-pre-release)
+  - [Release as a Target Type Imperatively (`npm version`-like)](#release-as-a-target-type-imperatively-npm-version-like)
+  - [Prevent Git Hooks](#prevent-git-hooks)
+  - [Signing Commits and Tags](#signing-commits-and-tags)
+  - [Lifecycle Scripts](#lifecycle-scripts)
+  - [Skipping Lifecycle Steps](#skipping-lifecycle-steps)
+  - [Committing Generated Artifacts in the Release Commit](#committing-generated-artifacts-in-the-release-commit)
+  - [Dry Run Mode](#dry-run-mode)
+  - [Prefix Tags](#prefix-tags)
+  - [CLI Help](#cli-help)
 - [Code Usage](#code-usage)
 - [FAQ](#faq)
-  * [How is `standard-version` different from `semantic-release`?](#how-is-standard-version-different-from-semantic-release)
-  * [Should I always squash commits when merging PRs?](#should-i-always-squash-commits-when-merging-prs)
-  * [Can I use `standard-version` for additional metadata files, languages or version files?](#can-i-use-standard-version-for-additional-metadata-files-languages-or-version-files)
-    + [Custom `updater`s](#custom-updaters)
+  - [How is `standard-version` different from `semantic-release`?](#how-is-standard-version-different-from-semantic-release)
+  - [Should I always squash commits when merging PRs?](#should-i-always-squash-commits-when-merging-prs)
+  - [Can I use `standard-version` for additional metadata files, languages or version files?](#can-i-use-standard-version-for-additional-metadata-files-languages-or-version-files)
+    - [Custom `updater`s](#custom-updaters)
       - [`readVersion(contents = string): string`](#readversioncontents--string-string)
       - [`writeVersion(contents = string, version: string): string`](#writeversioncontents--string-version-string-string)
 - [Acknowledgement](#acknowledgement)
@@ -351,6 +351,14 @@ This will prefix your tags to look something like `@scope/package@2.0.0`
 If you do not want to have any tag prefix you can use the `-t` flag and provide it with an **empty string** as value.
 
 > Note: simply -t or --tag-prefix without any value will fallback to the default 'v'
+
+### Regenerates whole changelog
+
+Sometimes you're adding standard-version to an existing project and want to regenerate it wholy in the new format for consistency.
+
+```sh
+@immobiliarelabs/standard-version --regenerateChangelog
+```
 
 ### CLI Help
 

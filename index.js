@@ -72,6 +72,17 @@ module.exports = async function standardVersion(argv) {
     } catch {}
   }
 
+  if (args.regenerateChangelog) {
+    args.releaseCount = (
+      await latestSemverTag(0, {
+        tagPrefix: args.tagPrefix,
+      })
+    ).length;
+    return {
+      changelog: await changelog(args),
+    };
+  }
+
   try {
     let version;
     if (pkg) {
