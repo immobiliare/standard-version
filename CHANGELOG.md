@@ -1,3 +1,10 @@
+# [10.1.0](https://github.com/immobiliare/standard-version/compare/v10.0.0...v10.1.0) (2022-06-03)
+
+
+### Features
+
+* regenerate full changelog ([2da5cfd](https://github.com/immobiliare/standard-version/commit/2da5cfd1caf9ccdaac23a908796b05301890bc59))
+
 # [10.0.0](https://github.com/immobiliare/standard-version/compare/v9.5.0...v10.0.0) (2022-06-03)
 
 
