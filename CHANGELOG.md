@@ -1,3 +1,10 @@
+## [10.2.1](https://github.com/immobiliare/standard-version/compare/v10.2.0...v10.2.1) (2023-11-08)
+
+
+### Bug Fixes
+
+* **git-semver-tags:** now return promises ([87b04be](https://github.com/immobiliare/standard-version/commit/87b04be102384d56e54b8d3ee09c99dd981bcb46))
+
 # [10.2.0](https://github.com/immobiliare/standard-version/compare/v10.1.0...v10.2.0) (2023-11-08)
 
 
