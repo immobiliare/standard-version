@@ -1,3 +1,10 @@
+## [10.2.2](https://github.com/immobiliare/standard-version/compare/v10.2.1...v10.2.2) (2023-11-08)
+
+
+### Bug Fixes
+
+* **updater:** fixed check for custom updater ([78a81d3](https://github.com/immobiliare/standard-version/commit/78a81d31152d8f7ac9bd02ef7562fb1655be0b9c))
+
 ## [10.2.1](https://github.com/immobiliare/standard-version/compare/v10.2.0...v10.2.1) (2023-11-08)
 
 
