@@ -1,3 +1,10 @@
+# [10.2.0](https://github.com/immobiliare/standard-version/compare/v10.1.0...v10.2.0) (2023-11-08)
+
+
+### Features
+
+* **updater:** updater can be an object ([8fe34ca](https://github.com/immobiliare/standard-version/commit/8fe34cac6557695626d8d74a9316dbf7c9c92e99))
+
 # [10.1.0](https://github.com/immobiliare/standard-version/compare/v10.0.0...v10.1.0) (2022-06-03)
 
 
