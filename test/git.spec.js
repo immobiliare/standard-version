@@ -71,6 +71,12 @@ function mock({ bump, changelog, tags }) {
   );
 
   mockery.registerMock('git-semver-tags', function (opts, cb) {
+    if (!cb || typeof opts !== 'function') {
+      return new Promise((resolve, reject) => {
+        if (tags instanceof Error) reject(tags);
+        else resolve(tags || []);
+      });
+    }
     if (typeof opts === 'function') cb = opts;
     if (tags instanceof Error) cb(tags);
     else cb(null, tags || []);
