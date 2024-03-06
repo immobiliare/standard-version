@@ -1,3 +1,10 @@
+# [10.3.0](https://github.com/immobiliare/standard-version/compare/v10.2.2...v10.3.0) (2024-03-06)
+
+
+### Features
+
+* add template updater ([5b8f5b1](https://github.com/immobiliare/standard-version/commit/5b8f5b1b7a50da578e90803bc9814aa983fad622))
+
 ## [10.2.2](https://github.com/immobiliare/standard-version/compare/v10.2.1...v10.2.2) (2023-11-08)
 
 
