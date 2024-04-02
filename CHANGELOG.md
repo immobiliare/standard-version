@@ -1,3 +1,10 @@
+## [10.3.1](https://github.com/immobiliare/standard-version/compare/v10.3.0...v10.3.1) (2024-04-02)
+
+
+### Bug Fixes
+
+* **bump:** write version on first release ([638670d](https://github.com/immobiliare/standard-version/commit/638670db9ef5bb26c7a1ce73ffde24848d1e443d))
+
 # [10.3.0](https://github.com/immobiliare/standard-version/compare/v10.2.2...v10.3.0) (2024-03-06)
 
 
